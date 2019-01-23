@@ -276,8 +276,8 @@ class ZefyrToolbarTheme {
   factory ZefyrToolbarTheme.fallback(BuildContext context) {
     final theme = Theme.of(context);
     return ZefyrToolbarTheme._(
-      color: theme.primaryColorLight,
-      toggleColor: theme.primaryColor,
+      color: Colors.blueAccent,
+      toggleColor: Colors.blueAccent[400],
       iconColor: theme.primaryIconTheme.color,
       disabledIconColor: theme.primaryColor,
     );

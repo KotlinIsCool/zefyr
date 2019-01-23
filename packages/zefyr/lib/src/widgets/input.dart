@@ -98,6 +98,11 @@ class InputConnectionController implements TextInputClient {
   }
 
   @override
+  void updateFloatingCursor(RawFloatingCursorPoint point) {
+    // TODO: implement updateFloatingCursor
+  }
+
+  @override
   void updateEditingValue(TextEditingValue value) {
     if (_sentRemoteValues.contains(value)) {
       /// There is a race condition in Flutter text input plugin where sending
