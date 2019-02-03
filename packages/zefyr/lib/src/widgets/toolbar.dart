@@ -114,7 +114,7 @@ class ZefyrToolbar extends StatefulWidget implements PreferredSizeWidget {
 
   static ZefyrToolbarState of(BuildContext context) {
     final _ZefyrToolbarScope scope =
-        context.inheritFromWidgetOfExactType(_ZefyrToolbarScope);
+        context.inheritFromWidgetOfExactType(_ZefyrToolbarScope) as _ZefyrToolbarScope;
     return scope?.toolbar;
   }
 

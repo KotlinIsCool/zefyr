@@ -38,7 +38,7 @@ class ZefyrList extends StatelessWidget {
   }
 
   Widget _buildItem(Node node, int index) {
-    LineNode line = node;
+    LineNode line = node as LineNode;
     return new ZefyrListItem(index: index, node: line);
   }
 }
@@ -52,7 +52,7 @@ class ZefyrListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final BlockNode block = node.parent;
+    final BlockNode block = node.parent as BlockNode;
     final style = block.style.get(NotusAttribute.block);
     final theme = ZefyrTheme.of(context);
     final bulletText =

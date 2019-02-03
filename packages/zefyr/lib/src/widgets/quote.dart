@@ -32,7 +32,7 @@ class ZefyrQuote extends StatelessWidget {
   }
 
   Widget _buildLine(Node node, TextStyle blockStyle, double indentSize) {
-    LineNode line = node;
+    LineNode line = node as LineNode;
 
     Widget content;
     if (line.style.contains(NotusAttribute.heading)) {

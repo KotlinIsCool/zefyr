@@ -41,7 +41,7 @@ class ZefyrCode extends StatelessWidget {
   }
 
   Widget _buildLine(Node node, TextStyle style) {
-    LineNode line = node;
+    LineNode line = node as LineNode;
     return new RawZefyrLine(node: line, style: style);
   }
 }

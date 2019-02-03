@@ -116,7 +116,7 @@ class _RawZefyrLineState extends State<RawZefyrLine> {
   }
 
   TextSpan _segmentToTextSpan(Node node, ZefyrThemeData theme) {
-    final TextNode segment = node;
+    final TextNode segment = node as TextNode;
     final attrs = segment.style;
 
     return new TextSpan(
@@ -140,8 +140,8 @@ class _RawZefyrLineState extends State<RawZefyrLine> {
   }
 
   Widget buildEmbed(BuildContext context, ZefyrScope scope) {
-    EmbedNode node = widget.node.children.single;
-    EmbedAttribute embed = node.style.get(NotusAttribute.embed);
+    EmbedNode node = widget.node.children.single as EmbedNode;
+    EmbedAttribute embed = node.style.get(NotusAttribute.embed) as EmbedAttribute;
 
     if (embed.type == EmbedType.horizontalRule) {
       return ZefyrHorizontalRule(node: node);
