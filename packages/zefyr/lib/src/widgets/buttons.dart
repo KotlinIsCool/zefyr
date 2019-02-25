@@ -251,7 +251,10 @@ class _ImageButtonState extends State<ImageButton> {
     return toolbar.buildButton(
       context,
       ZefyrToolbarAction.galleryImage,
-      onPressed: _pickFromGallery,
+      onPressed: () {
+        final editor = ZefyrToolbar.of(context).editor;
+        if (editor.selection.start == editor.selection.end) _pickFromGallery();
+      },
     );
   }
 
